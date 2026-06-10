@@ -1,0 +1,44 @@
+<Window x:Class="ColorPickerTray.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="设置" Height="360" Width="440">
+    <Grid Margin="16,16,16,16">
+        <StackPanel>
+            <!-- 热键 -->
+            <TextBlock Text="热键" FontWeight="Bold" Margin="0,0,0,4" />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="拾色热键：" VerticalAlignment="Center" Width="70" />
+                <TextBox x:Name="HotKeyText" Width="180" Margin="4,0,0,0" />
+                <TextBlock Text="例如 F1、Ctrl+F1" VerticalAlignment="Center" Foreground="Gray" Margin="8,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <TextBlock Text="历史热键：" VerticalAlignment="Center" Width="70" />
+                <TextBox x:Name="HistoryHotKeyText" Width="180" Margin="4,0,0,0" />
+                <TextBlock Text="例如 H、Ctrl+H" VerticalAlignment="Center" Foreground="Gray" Margin="8,0,0,0" />
+            </StackPanel>
+
+            <!-- 颜色格式 -->
+            <TextBlock Text="颜色格式" FontWeight="Bold" Margin="0,18,0,4" />
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="HsvCheck" Content="HSV" Margin="0,0,14,0" />
+                <CheckBox x:Name="RgbCheck" Content="RGB" Margin="0,0,14,0" />
+                <CheckBox x:Name="HexCheck" Content="HEX" />
+            </StackPanel>
+            <CheckBox x:Name="CopyCurrentOnlyCheck" Content="只复制当前格式" Margin="0,4,0,0" />
+
+            <!-- 主题 -->
+            <TextBlock Text="主题" FontWeight="Bold" Margin="0,18,0,4" />
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="ThemeLightBlue" Content="淡蓝" GroupName="ThemeGroup" Margin="0,0,14,0" />
+                <RadioButton x:Name="ThemeDark" Content="深色" GroupName="ThemeGroup" Margin="0,0,14,0" />
+                <RadioButton x:Name="ThemeLight" Content="浅色" GroupName="ThemeGroup" />
+            </StackPanel>
+
+            <!-- 按钮 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button Content="保存" Width="100" Click="SaveButton_Click" Margin="0,0,8,0" />
+                <Button Content="取消" Width="100" Click="CancelButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

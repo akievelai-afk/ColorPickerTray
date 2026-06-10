@@ -1,0 +1,17 @@
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.vs/
+.vs/
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.tmp
+*.cache
+Thumbs.db
+*.bak
+*.swp
+*.tmp
